@@ -1,0 +1,70 @@
+/* Universal Selector*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+header {
+  background-color: dodgerblue;
+  padding: 20px;
+  text-align: center;
+}
+
+img {
+  border-radius: 30px;
+}
+
+nav {
+  background-color: beige;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  list-style: none;
+  background-color: #333;
+  gap: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
+  color: #333;
+}
+
+nav ul li a:hover {
+  color: rgb(133, 204, 204);
+}
+
+main {
+  padding: 20px;
+}
+
+article,
+aside {
+  margin-bottom: 20px;
+}
+
+footer {
+  display: flex;
+  height: 100px;
+  flex-direction: column;
+  background-color: #333;
+  padding: 40px;
+}
+
+footer ul li {
+  list-style-type: none;
+}
+
+footer ul li a {
+  text-decoration: none;
+  color: dodgerblue;
+}
