@@ -1,25 +1,76 @@
+/* Desktop */
 @media (min-width: 768px) {
   nav ul {
     flex-direction: row;
     justify-content: center;
+    gap: 60px;
   }
 
   main {
     display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+  }
+
+  .top-content {
+    /* Estilizando um novo contêiner */
+    display: flex;
+    flex: 1 1 100%;
     gap: 30px;
   }
 
   article,
   aside {
-    flex: 1;
+    display: flex;
+    flex: 1; /* Permite que o article e o aside se dividam no .top-content */
     flex-direction: column;
+    align-items: center;
   }
 
   aside {
     background-color: rgb(190, 216, 216);
-    border-radius: 20px;
-    height: 200px;
+    border-radius: 5px;
+    height: 500px;
+  }
+
+  .bottom-content {
+    width: 100%; /* Garante que ela ocupe toda a largura disponível */
+    height: 400px; /* flex: 1 1 100%;  também funcionaria aqui para um item flex que quebra a linha */
+    background-color: aliceblue;
   }
 }
 
-@media (min-width) {}
+/* Mobile */
+@media (max-width: 468px) {
+
+  main {
+    padding: 20px;
+  }
+
+  article,
+  article h2,
+  article p {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(190, 216, 216);
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  aside,
+  aside h2,
+  aside p {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 5px;
+    height: 500px;
+    padding: 10px;
+  }
+
+  footer p {
+    text-align: center;
+    color: dodgerblue;
+  }
+}

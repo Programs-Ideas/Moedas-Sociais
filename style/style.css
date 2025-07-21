@@ -1,4 +1,6 @@
+
 /* Universal Selector*/
+
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +17,9 @@ header {
   text-align: center;
 }
 
-img {
+header img {
+  width: 140px;
+  margin: 20px;
   border-radius: 30px;
 }
 
@@ -29,27 +33,61 @@ nav ul {
   align-items: center;
   padding: 10px;
   list-style: none;
-  background-color: #333;
+  background-color: #1b5c70;
   gap: 20px;
 }
 
 nav ul li a {
   text-decoration: none;
   transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
-  color: #333;
+  color: #9cda94;
 }
 
 nav ul li a:hover {
-  color: rgb(133, 204, 204);
+  color: rgb(49, 160, 160);
 }
 
-main {
-  padding: 20px;
+article {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: rgb(210, 240, 240);
+  border: 2px dotted rgb(215, 230, 230);
+  border-radius: 5px;
+  flex-basis: 20%;
 }
 
-article,
+article > p {
+  width: 70%;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+article h2 {
+  padding-bottom: 30px;
+  font-size: xx-large;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  transition: 2s;
+}
+
+article h2:hover {
+  transition: 2s;
+  color: rgb(202, 199, 149);
+}
+
 aside {
-  margin-bottom: 20px;
+  text-align: center;
+}
+
+aside h2 {
+  margin-top: 10px;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: aliceblue;
 }
 
 footer {
@@ -58,6 +96,11 @@ footer {
   flex-direction: column;
   background-color: #333;
   padding: 40px;
+}
+
+footer p {
+  text-align: center;
+  color: dodgerblue;
 }
 
 footer ul li {
