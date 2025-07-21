@@ -16,41 +16,53 @@
   .top-content {
     /* Estilizando um novo contêiner */
     display: flex;
-    flex: 1 1 100%;
+    flex: 1 100%;
     gap: 30px;
   }
 
-  article,
-  aside {
+  article {
     display: flex;
     flex: 1; /* Permite que o article e o aside se dividam no .top-content */
     flex-direction: column;
     align-items: center;
   }
 
-  aside {
-    background-color: rgb(190, 216, 216);
-    border-radius: 5px;
-    height: 500px;
+  .bottom-content {
+    display: flex;
+    background-color: aliceblue;
+    flex-wrap: wrap;
+    height: 800px; /* flex: 1 1 100%;  também funcionaria aqui para um item flex que quebra a linha */
+    flex: 1 100%; /* Permite que o article e o aside se dividam no .top-content */
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    flex-basis: 20%;
   }
 
-  .bottom-content {
-    width: 100%; /* Garante que ela ocupe toda a largura disponível */
-    height: 400px; /* flex: 1 1 100%;  também funcionaria aqui para um item flex que quebra a linha */
-    background-color: aliceblue;
+  .bottom-content h3 {
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: x-large;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    transition: 2s;
+  }
+
+  .bottom-content div > p {
+    width: 50%;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
   }
 }
 
 /* Mobile */
 @media (max-width: 468px) {
-
   main {
     padding: 20px;
   }
 
-  article,
-  article h2,
-  article p {
+  article {
     display: flex;
     justify-content: center;
     background-color: rgb(190, 216, 216);
@@ -58,15 +70,8 @@
     padding: 10px;
   }
 
-  aside,
-  aside h2,
-  aside p {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    border-radius: 5px;
-    height: 500px;
-    padding: 10px;
+  article h2 {
+    font-size: 25px;
   }
 
   footer p {
