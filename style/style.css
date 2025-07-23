@@ -41,6 +41,13 @@ nav ul {
   gap: 20px;
 }
 
+nav ul li {
+  padding-right: 10px;
+  padding-left: 10px;
+  border-right: 1px solid #9cda94;
+  border-left: 1px solid #9cda94;
+}
+
 nav ul li a {
   text-decoration: none;
   transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
@@ -83,7 +90,7 @@ article h2:hover {
 
 footer {
   display: flex;
-  height: 100px;
+  height: 300px;
   flex-direction: column;
   background-color: #333;
   padding: 40px;
@@ -92,6 +99,10 @@ footer {
 footer p {
   text-align: center;
   color: dodgerblue;
+}
+
+footer p + p {
+  padding-top: 40px;
 }
 
 footer ul li {

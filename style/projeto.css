@@ -1,0 +1,30 @@
+
+
+.bottom-content .content-box__explain1__vantagens {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .bottom-content .content-box__explain1__vantagens h2 {
+    display: flex;
+    padding-bottom: 30px;
+    gap: 10px;
+  }
+
+  .bottom-content .content-box__explain1__vantagens ul {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    font-size: 20px;
+    font-family: italic;
+  }
+
+  .bottom-content .content-box__explain1__vantagens ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    list-style-type: square;
+    padding-top: 30px;
+  }
