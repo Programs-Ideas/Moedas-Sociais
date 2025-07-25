@@ -61,10 +61,42 @@ nav ul li a:hover {
 article {
   display: flex;
   flex-wrap: wrap;
-  background-color: rgb(210, 240, 240);
-  border: 2px dotted rgb(215, 230, 230);
+  background-color: azure;
   border-radius: 5px;
   flex-basis: 20%;
+  flex: 1; /* Permite que o article e o aside se dividam no .top-content */
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+section h3 {
+  text-align: center;
+  padding-bottom: 30px;
+  padding: 20px;
+}
+
+section img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  border-radius: 5px;
+}
+
+section > p {
+  width: 70%;
+  padding: 20px;
+  font-size: 20px;
+  padding-top: 40px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 article > p {
@@ -112,4 +144,115 @@ footer ul li {
 footer ul li a {
   text-decoration: none;
   color: dodgerblue;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  body {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    background-color: rgb(220, 243, 234);
+  }
+
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+  }
+
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+  }
+
+  .top-content {
+    /* Estilizando um novo contêiner */
+    display: flex;
+    flex: 1 1 100%;
+    gap: 30px;
+  }
+
+  .top-content > article {
+    flex: 1 1 60%; /* Permite que o article ocupe mais espaço */
+    padding: 30px;
+    border-radius: 5px;
+  }
+
+  .bottom-content {
+    display: flex;
+    flex-wrap: wrap; /* flex: 1 1 100%; funcionaria aqui para um item flex que quebra a linha */
+    flex: 1; /* Permite que o article e o aside se dividam no .top-content */
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .bottom-content > div[class^="content-box__explain"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .bottom-content div h3 {
+    width: 100%;
+    padding-top: 60px;
+    padding-left: 30px;
+    font-size: 27px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    transition: 2s;
+  }
+
+  .bottom-content div p {
+    width: 70%;
+    padding: 20px;
+    font-size: 20px;
+    text-align: justify;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+
+  .bottom-content > div[class^="content-box__explain"] > img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    max-width: 500px; /* Limita a largura máxima da imagem */
+    padding: 100px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+  }
+
+  /* Estilizando os artigos dentro do .bottom-content do jeito normal 
+  .bottom-content .content-box__explain1 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 1200px;
+    gap: 50px;
+    flex: 1;
+  }
+
+  .bottom-content .content-box__explain2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 500px;
+    gap: 50px;
+    flex: 1;
+  }
+
+  .bottom-content .content-box__explain3 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 500px;
+    flex: 1;
+    gap: 50px;
+  } */
 }
