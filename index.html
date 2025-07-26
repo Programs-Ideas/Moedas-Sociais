@@ -7,6 +7,7 @@
     <title>CIEP 386 - Moedas sociais</title>
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/media.css">
+
 </head>
 
 <body>
@@ -14,19 +15,40 @@
     <header>
         <img src="./images/ciep.jpg" alt="CIEP 386">
         <h1>Projeto - Moedas Sociais | Ciep 386</h1>
+
+        <div id="online-information">
+            <div id="iclima">
+
+            </div>
+
+            <!-- Para implementar futuramente 
+            <div id="inscritos">
+                
+            </div>
+            -->
+        </div>
     </header>
 
     <nav>
-        <ul>
-            <li><a href="./index.html">Início</a></li>
-            <li><a href="./anotherContents/projeto.html">Sobre Projeto</a></li>
-            <li><a href="./anotherContents/area_aluno.html">Área do Aluno</a></li>
-            <li><a href="./anotherContents/area_professor.html">Área do Professor</a></li>
-            <li><a href="./anotherContents/atividades.html">Atividades do projeto</a></li>
-            <li><a href="./anotherContents/fale_conosco.html">fale conosco</a></li>
-            <li><a href="./anotherContents/formulario.html">Inscreva-se</a></li>
-        </ul>
+        <div id="mySidenav" class="sideNav">
+            <a href="javascript:void(0)" class="closebtn" onclick="openNav()">&times;</a>
+            <a href="../index.html">Início</a>
+            <a href="./projeto.html">Sobre Projeto</a>
+            <a href="./area_aluno.html">Área do Aluno</a>
+            <a href="./area_professor.html">Área do Professor</a>
+            <a href="./atividades.html">Atividades do projeto</a>
+            <a href="./fale_conosco.html">Fale conosco</a>
+            <a href="./formulario.html">Inscreva-se</a>
+        </div>
     </nav>
+
+    <div style="display: flex;
+                font-size: 30px;
+                cursor: pointer;
+                margin-left: 90px;
+                margin-top: 20px;
+                flex-wrap: wrap;
+                flex-direction: column;" onclick="closeNav()">&#9776;</div>
 
     <main>
         <div class="top-content">
@@ -50,9 +72,10 @@
                 <p>A área do aluno é onde você pode acompanhar suas Moedas Sociais, ver suas conquistas e participar de
                     atividades que ajudam a escola e a comunidade. Aqui, você também pode aprender mais sobre cidadania
                     e
-                    como suas ações fazem a diferença. Logo após tem uma imagem ilustrando como entrar na Área do Aluno
+                    como suas ações fazem a diferença. Logo após tem uma imagem ilustrando como entrar na Área do Aluno.
                 </p>
-                <img src="./images/area_aluno.png" alt="Área do Aluno em desenvolvimento" class="area-aluno-image" title="Área do aluno em desenvolvimento">
+                <img src="./images/area_aluno.png" alt="Área do Aluno em desenvolvimento" class="area-aluno-image"
+                    title="Área do aluno em desenvolvimento">
                 <p>Para acessar, clique no link "Área do Aluno" no menu de navegação. Você precisará fazer login com seu
                     usuário e senha fornecidos pela escola.</p>
             </div>
@@ -62,7 +85,8 @@
                     Sociais dos alunos, registrar atividades e acompanhar o progresso de cada estudante.</p>
                 <p>Para acessar, clique no link "Área do Professor" no menu de navegação. Você precisará fazer login com
                     seu usuário e senha fornecidos pela escola.</p>
-                <img src="./images/area_professor.png" alt="Área do Professor em desenvolvimento" class="area-professor-image" title="Área do professor em desenvolvimento">
+                <img src="./images/area_professor.png" alt="Área do Professor em desenvolvimento"
+                    class="area-professor-image" title="Área do professor em desenvolvimento">
                 <p>Na área do professor, você pode:</p>
             </div>
             <div class="content-box__explain3">
@@ -74,10 +98,20 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 CIEP 386 Guilherme da Silveira Filho</p>
-        <p>& <i>Steve - Desenvolvedor</i></p>
+        <div>
+            <p>&copy; 2025 CIEP 386 Guilherme da Silveira Filho</p>
+        </div>
+
+        <div id="iendereco">
+
+        </div>
+
+        <div id="ilocalizacao">
+
+        </div>
     </footer>
 
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

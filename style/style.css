@@ -18,55 +18,83 @@ header {
 }
 
 header h1 {
-  padding-top: 80px;
+  padding-top: 110px;
+  font-size: 50px;
 }
 
 header img {
-  width: 140px;
+  width: 240px;
   margin: 20px;
   border-radius: 30px;
 }
 
-nav {
-  background-color: beige;
+main {
+  transition: margin-left 0.5s; /* Transição suave para o menu de navegação */
+  padding: 20px; /* Espaçamento interno do main */
 }
 
-nav ul {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 10px;
-  list-style: none;
-  background-color: #1b5c70;
-  gap: 20px;
+nav .sideNav {
+  height: 100%; /* Altura total do menu de navegação */
+  width: 0; /* Largura inicial do menu de navegação */
+  top: 0; /* Alinhamento ao topo da página */
+  z-index: 1; /* Colocando o menu acima de outros elementos */ 
+  background-color: #cebaba; /* Cor de fundo do menu de navegação */
+  position: fixed; /* Posição fixa para o menu de navegação */
+  left: 0; /* Alinhamento à esquerda da página */
+  overflow-x: hidden; /* Oculta o conteúdo que transborda horizontalmente */
+  padding-top: 60px; /* Ocupação do espaço superior para o menu de navegação */
+  transition: 0.5s; /* Transição suave para a largura do menu de navegação */
 }
 
-nav ul li {
-  padding-right: 10px;
-  padding-left: 10px;
-  border-right: 1px solid #9cda94;
-  border-left: 1px solid #9cda94;
+nav .sideNav > a {
+  padding: 8px 8px 8px 32px; /* Espaçamento interno dos links do menu */
+  text-decoration: none; /* Removendo o sublinhado dos links */
+  font-size: 25px; /* Tamanho da fonte dos links */
+  color: #818181; /* Cor dos links do menu */
+  display: flex; /* Exibição em bloco para os links do menu */
+  transition: 0.3s; /* Transição suave para a cor dos links */
 }
 
-nav ul li a {
-  text-decoration: none;
-  transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;
-  color: #9cda94;
+nav .sideNav a:hover {
+  color: #f1f1f1; /* Cor dos links ao passar o mouse */
 }
 
-nav ul li a:hover {
-  color: rgb(49, 160, 160);
+nav .sideNav .closebtn {
+  position: absolute; /* Posição absoluta para o botão de fechar */
+  top: 20px; /* Alinhamento ao topo do menu */
+  right: 25px; /* Alinhamento à direita do menu */
+  font-size: 36px; /* Tamanho da fonte do botão de fechar */
+  margin-left: 50px; /* Margem à esquerda do botão de fechar */
 }
-
 article {
   display: flex;
   flex-wrap: wrap;
   background-color: azure;
   border-radius: 5px;
-  flex-basis: 20%;
   flex: 1; /* Permite que o article e o aside se dividam no .top-content */
   flex-direction: column;
   align-items: center;
+}
+
+article > p {
+  width: 70%;
+  text-align: justify;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+article h2 {
+  text-align: center;
+  padding-bottom: 30px;
+  font-size: 40px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  transition: 2s;
+}
+
+article h2:hover {
+  transition: 2s;
+  color: rgb(202, 199, 149);
 }
 
 section {
@@ -74,7 +102,6 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
 }
 
 section h3 {
@@ -91,35 +118,6 @@ section img {
   border-radius: 5px;
 }
 
-section > p {
-  width: 70%;
-  padding: 20px;
-  font-size: 20px;
-  padding-top: 40px;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-article > p {
-  width: 70%;
-  text-align: justify;
-  font-size: 20px;
-  margin-top: 20px;
-}
-
-article h2 {
-  text-align: center;
-  padding-bottom: 30px;
-  font-size: x-large;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  transition: 2s;
-}
-
-article h2:hover {
-  transition: 2s;
-  color: rgb(202, 199, 149);
-}
-
 footer {
   display: flex;
   height: 300px;
@@ -130,6 +128,7 @@ footer {
 
 footer p {
   text-align: center;
+  font-size: 30px;
   color: dodgerblue;
 }
 
@@ -164,14 +163,14 @@ footer ul li a {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    padding: 20px;
+    margin-right: 20px; /* Espaçamento à direita do main */
   }
 
   .top-content {
     /* Estilizando um novo contêiner */
     display: flex;
     flex: 1 1 100%;
-    gap: 30px;
+    gap: 10px;
   }
 
   .top-content > article {
@@ -199,8 +198,8 @@ footer ul li a {
   .bottom-content div h3 {
     width: 100%;
     padding-top: 60px;
-    padding-left: 30px;
-    font-size: 27px;
+    padding-left: 35px;
+    font-size: 42px;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     transition: 2s;
@@ -209,7 +208,8 @@ footer ul li a {
   .bottom-content div p {
     width: 70%;
     padding: 20px;
-    font-size: 20px;
+    padding-top: 30px;
+    font-size: 30px;
     text-align: justify;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -226,6 +226,14 @@ footer ul li a {
     padding: 100px;
     border-radius: 5px;
     transition: transform 0.3s ease;
+  }
+
+  .bottom-content .content-box__explain1 {
+    background-color: #9cda94;
+  }
+
+  .bottom-content .content-box__explain2 {
+    background-color: cadetblue;
   }
 
   /* Estilizando os artigos dentro do .bottom-content do jeito normal 

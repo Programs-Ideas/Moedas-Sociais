@@ -1,0 +1,21 @@
+table,
+tr,
+td {
+    height: 120px;
+    width: 1200px;
+    margin: 20px;
+    margin-left: 80px;
+    border: 5px inset black;
+    border-collapse: collapse;
+}
+
+input:focus {
+    box-shadow: black;
+    transition: 3s;
+}
+
+input:hover {
+    cursor: pointer;
+    box-shadow: rgba(red, black, brown, 0.80);
+    transition: 3s;
+}
