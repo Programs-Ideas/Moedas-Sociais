@@ -18,19 +18,20 @@
     </header>
 
     <nav>
-        <div id="mySidenav" class="sideNav">
-            <a href="javascript:void(0)" class="closebtn" onclick="openNav()">&times;</a>
+        <div id="mySideNav" class="sideNav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="../index.html">Início</a>
             <a href="./projeto.html">Sobre Projeto
             <a href="./area_aluno.html">Área do Aluno</a>
             <a href="./area_professor.html">Área do Professor</a>
             <a href="./atividades.html">Atividades do projeto</a>
             <a href="./fale_conosco.html">Fale conosco</a>
-            <a href="./formulario.html">Inscreva-se</a>
+            <a href="./formulario_aluno.html">Inscreva-se (Aluno)</a>
+            <a href="./formulario_professor.html">Inscreva-se (Professor)</a>
         </div>
     </nav>
 
-    <span style="font-size:30px;cursor:pointer" onclick="closeNav()">&#9776;</span>
+    <div id="menu-icon" onclick="openNav()">&#9776;</div>
 
     <main>
         <div class="top-content">
@@ -67,6 +68,8 @@
     <footer>
         <p>&copy; 2025 CIEP 386</p>
     </footer>
+
+    <script src="../js/menu.js"></script>
 
 </body>
 

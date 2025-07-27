@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIEP 386 - Moedas sociais</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/media.css">
+</head>
+
+<style>
+    /* Starting to design the input form only for student */
+
+    /* Styling the form container */
+    .form-container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }   
+
+    /* Styling the form elements */
+    .form-group {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    article>form {
+        display: flex;
+        flex-direction: column;
+        flex: 1 60%;
+        gap: 30px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        padding: 40px;
+        background-color: blanchedalmond;
+        border-radius: 55px;
+        width: 100%;
+    }
+
+    article>form label {
+        font-size: x-large;
+        color: rgb(3, 2, 1);
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    article>form input,
+    article>form textarea {
+        width: 50%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    article>form input[type="file"] {
+        width: 50%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        background-color: white;
+    }
+
+    article>form select {
+        width: 50%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    button {
+        align-self: center;
+        width: 100px;
+        height: 50px;
+        background-color: dodgerblue;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+</style>
+
+<body>
+
+    <header>
+        <img src="../images/ciep.jpg" alt="CIEP 386">
+        <h1>Projeto - Moedas Sociais | Ciep 386</h1>
+
+        <div id="online-information">
+            <div id="iclima">
+
+            </div>
+
+            <!-- Para implementar futuramente 
+            <div id="inscritos">
+                
+            </div>
+            -->
+        </div>
+    </header>
+
+
+    <nav>
+        <div id="mySideNav" class="sideNav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="../index.html">Início</a>
+            <a href="./projeto.html">Sobre Projeto
+                <a href="./area_aluno.html">Área do Aluno</a>
+                <a href="./area_professor.html">Área do Professor</a>
+                <a href="./atividades.html">Atividades do projeto</a>
+                <a href="./fale_conosco.html">Fale conosco</a>
+                <a href="./formulario_aluno.html">Inscreva-se (Aluno)</a>
+                <a href="./formulario_professor.html">Inscreva-se (Professor)</a>
+        </div>
+    </nav>
+
+    <div id="menu-icon" onclick="openNav()">&#9776;</div>
+
+    <main class="main-content">
+        <div class="main-content__top-content">
+            <article>
+                <h2>Formulário de Inscrição (Professor)</h2>
+                <p>Ao realizar a inscrição, você receberá seu nome de usuário e sua senha para acessar a 
+                <a href="./area_professor.html">Área do Professor</a></p>
+                <p>Preencha o formulário abaixo para se inscrever no projeto de Moedas Sociais do CIEP 386.</p>
+                <form action="../back-end/php/salvar_formulario.php" method="POST" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="">Nome Completo:</label>
+                        <input type="text" name="nome" placeholder="Nome Completo:" required><br>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Turmas em emergência:</label>
+                        <select name="Turmas da manhã" id="option-classes-morning" title="turma-da-manha-para-trabalhar"
+                            required>
+                            <optgroup label="1° ano (manhã)">
+                                <option value="1grade-1002">1° ano (manhã) - 1002</option>
+                                <option value="1grade-1003">1° ano (manhã) - 1003</option>
+                            </optgroup>
+                            <optgroup label="2° ano (manhã)">
+                                <option value="2grade-2004">2° ano (manhã) - 2004</option>
+                                <option value="2grade-2005">2° ano (manhã) - 2005</option>
+                            </optgroup>
+                            <optgroup label="3° ano (manhã)">
+                                <option value="3grade-3006">3° ano (manhã) - 3006</option>
+                                <option value="3grade-3007">3° ano (manhã) - 3007</option>
+                            </optgroup>
+                        </select>
+
+                        <select name="" id="option-classes-afternoon" title="turma-da-tarde-para-trabalhar">
+                            <optgroup label="1° ano (tarde)">
+                                <option value="1grade-1012">1° ano (tarde) - 1012</option>
+                                <option value="1grade-1014">1° ano (tarde) - 1014</option>
+                                <option value="1grade-1015">1° ano (tarde) - 1016</option>
+                            </optgroup>
+                            <optgroup label="2° ano (tarde)">
+                                <option value="2grade-2013">2° ano (tarde) - 2013</option>
+                                <option value="2grade-2014">2° ano (tarde) - 2014</option>
+                                option value="2grade-2015">2° ano (tarde) - 2015</option>
+                            </optgroup>
+                            <optgroup label="3° ano (tarde)">
+                                <option value="3grade-3016">3° ano (tarde) - 3016</option>
+                                <option value="3grade-3017">3° ano (tarde) - 3017</option>
+                                <option value="3grade-3018">3° ano (tarde) - 3018</option>
+                            </optgroup>
+                        </select>
+
+                        <select name="" id="option-classes-evening" title="turma-da-noite-para-trabalhar">
+                            <optgroup label="1° ano (noite)">
+                                <option value="1grade-1019">1° ano (tarde) - 1019</option>
+                                <option value="1grade-1020">1° ano (tarde) - 1020</option>
+                                <option value="1grade-1021">1° ano (tarde) - 1021</option>
+                            </optgroup>
+                            <optgroup label="2° ano (noite)">
+                                <option value="2grade-5022">2° ano (tarde) - 2022</option>
+                                <option value="2grade-5023">2° ano (tarde) - 2023</option>
+                                <option value="2grade-5024">2° ano (tarde) - 2024</option>
+                            </optgroup>
+                            <optgroup label="3° ano (noite)"></optgroup>
+                                <option value="3grade-3025">3° ano (tarde) - 3025</option>
+                                <option value="3grade-3026">3° ano (tarde) - 3026</option>
+                                <option value="3grade-3027">3° ano (tarde) - 3027</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Sugestão para o Nome da Moeda:</label>
+                        <input type="text" name="moeda" class="form-control" placeholder="Sugestão de nome da moeda:"
+                            required><br>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">O que você espera deste projeto em nossa escola?</label>
+                        <textarea name="descricao" rows="4" class="form-control"
+                            placeholder="Escreva aqui seu propósito e opinião sobre o projeto:" required></textarea><br>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="">Sugestão para a logo da moeda (Imagem)</label>
+                        <input type="file" name="logo" class="form-control" placeholder="Logo da moeda (imagem):"
+                            accept="image/*" required><br>
+                    </div>
+
+                    <button type="submit">Enviar cadastro</button>
+            </article>
+            </article>
+            <aside>
+                <h2></h2>
+                <p></p>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CIEP 386 Guilherme da Silveira Filho | <i>Feito por Steve Vaz</i></p>
+    </footer>
+
+    <script src="../js/menu.js"></script>
+
+</body>
+
+</html>

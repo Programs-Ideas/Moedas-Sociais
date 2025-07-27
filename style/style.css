@@ -12,19 +12,23 @@ body {
 
 header {
   display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   background-color: dodgerblue;
   padding: 20px;
   text-align: center;
 }
 
 header h1 {
-  padding-top: 110px;
-  font-size: 50px;
+  padding-top: 0;
+  margin-top: 20px;
+  font-size: 30px;
 }
 
 header img {
-  width: 240px;
-  margin: 20px;
+  width: 150px;
+  margin: 0;
   border-radius: 30px;
 }
 
@@ -43,13 +47,16 @@ nav .sideNav {
   left: 0; /* Alinhamento à esquerda da página */
   overflow-x: hidden; /* Oculta o conteúdo que transborda horizontalmente */
   padding-top: 60px; /* Ocupação do espaço superior para o menu de navegação */
+  margin-bottom: 20px; /* Espaçamento inferior do menu de navegação */
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif; /* Fonte do menu de navegação */
   transition: 0.5s; /* Transição suave para a largura do menu de navegação */
 }
 
 nav .sideNav > a {
-  padding: 8px 8px 8px 32px; /* Espaçamento interno dos links do menu */
+  padding: 22px 8px 8px 42px; /* Espaçamento interno dos links do menu */
   text-decoration: none; /* Removendo o sublinhado dos links */
-  font-size: 25px; /* Tamanho da fonte dos links */
+  font-size: 22px; /* Tamanho da fonte dos links */
   color: #818181; /* Cor dos links do menu */
   display: flex; /* Exibição em bloco para os links do menu */
   transition: 0.3s; /* Transição suave para a cor dos links */
@@ -62,24 +69,53 @@ nav .sideNav a:hover {
 nav .sideNav .closebtn {
   position: absolute; /* Posição absoluta para o botão de fechar */
   top: 20px; /* Alinhamento ao topo do menu */
-  right: 25px; /* Alinhamento à direita do menu */
+  right: 35px; /* Alinhamento à direita do menu */
   font-size: 36px; /* Tamanho da fonte do botão de fechar */
   margin-left: 50px; /* Margem à esquerda do botão de fechar */
 }
+
+#menu-icon {
+  display: flex; /* Escondendo o ícone do menu por padrão */
+  font-size: 30px; /* Tamanho da fonte do ícone do menu */
+  cursor: pointer; /* Cursor de ponteiro ao passar sobre o ícone do menu */
+  margin-left: 120px; /* Margem à esquerda do ícone do menu */
+  margin-top: 20px; /* Margem superior do ícone do menu */
+}
+
 article {
   display: flex;
   flex-wrap: wrap;
   background-color: azure;
   border-radius: 5px;
-  flex: 1; /* Permite que o article e o aside se dividam no .top-content */
+  flex: 1 100%; /* Permite que o article e o aside se dividam no .top-content */
   flex-direction: column;
   align-items: center;
+}
+
+article a {
+  text-decoration: none;
+  color: rgb(7, 7, 7);
+  font-size: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  transition: 2s;
+  width: 50px;
+  height: 20px;
+  padding: 5px;
+  background-color: dodgerblue;
+  border-radius: 5px;
+}
+
+article a:hover {
+  color: rgb(233, 205, 45);
+  transition: 2s;
 }
 
 article > p {
   width: 70%;
   text-align: justify;
-  font-size: 30px;
+  font-size: 25px;
   margin-top: 20px;
 }
 
@@ -127,13 +163,11 @@ footer {
 }
 
 footer p {
-  text-align: center;
-  font-size: 30px;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 40px;
+  font-size: 20px;
   color: dodgerblue;
-}
-
-footer p + p {
-  padding-top: 40px;
 }
 
 footer ul li {
@@ -153,10 +187,22 @@ footer ul li a {
     background-color: rgb(220, 243, 234);
   }
 
-  nav ul {
+  header {
     flex-direction: row;
-    justify-content: center;
-    gap: 60px;
+    justify-content: flex-start;
+    padding: 20px;
+    text-align: center;
+  }
+
+  header h1 {
+    padding-top: 0;
+    margin-left: 20px;
+    font-size: 40px;
+  }
+
+  header img {
+    width: 220px;
+    margin-left: 20px;
   }
 
   main {
@@ -166,28 +212,28 @@ footer ul li a {
     margin-right: 20px; /* Espaçamento à direita do main */
   }
 
-  .top-content {
+  .main-content__top-content {
     /* Estilizando um novo contêiner */
     display: flex;
     flex: 1 1 100%;
     gap: 10px;
   }
 
-  .top-content > article {
+  .main-content__top-content > article {
     flex: 1 1 60%; /* Permite que o article ocupe mais espaço */
     padding: 30px;
-    border-radius: 5px;
+    border-radius: 55px;
   }
 
-  .bottom-content {
+  .main-content__bottom-content {
     display: flex;
-    flex-wrap: wrap; /* flex: 1 1 100%; funcionaria aqui para um item flex que quebra a linha */
+    flex-wrap: wrap; /* flex: 1 1 100%; funciona aqui para um item flex que quebra a linha */
     flex: 1; /* Permite que o article e o aside se dividam no .top-content */
     flex-direction: column;
     gap: 20px;
   }
 
-  .bottom-content > div[class^="content-box__explain"] {
+  .main-content__bottom-content > div[class^="content-box__explain"] {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -195,7 +241,7 @@ footer ul li a {
     padding: 20px;
   }
 
-  .bottom-content div h3 {
+  .main-content__bottom-content div h3 {
     width: 100%;
     padding-top: 60px;
     padding-left: 35px;
@@ -205,7 +251,7 @@ footer ul li a {
     transition: 2s;
   }
 
-  .bottom-content div p {
+  .main-content__bottom-content div p {
     width: 70%;
     padding: 20px;
     padding-top: 30px;
@@ -215,7 +261,7 @@ footer ul li a {
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   }
 
-  .bottom-content > div[class^="content-box__explain"] > img {
+  .main-content__bottom-content > div[class^="content-box__explain"] > img {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -228,12 +274,23 @@ footer ul li a {
     transition: transform 0.3s ease;
   }
 
-  .bottom-content .content-box__explain1 {
-    background-color: #9cda94;
+  .main-content__bottom-content > div[class^="content-box__explain"] > img:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
   }
 
-  .bottom-content .content-box__explain2 {
+  .main-content__bottom-content .content-box__explain1 {
+    background-color: #f0b27a;
+    border-radius: 55px;
+  }
+
+  .main-content__bottom-content .content-box__explain2 {
+    background-color: #9cda94;
+    border-radius: 55px;
+  }
+
+  .main-content__bottom-content .content-box__explain3 {
     background-color: cadetblue;
+    border-radius: 55px;
   }
 
   /* Estilizando os artigos dentro do .bottom-content do jeito normal 

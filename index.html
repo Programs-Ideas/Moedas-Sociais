@@ -30,28 +30,22 @@
     </header>
 
     <nav>
-        <div id="mySidenav" class="sideNav">
-            <a href="javascript:void(0)" class="closebtn" onclick="openNav()">&times;</a>
-            <a href="../index.html">Início</a>
-            <a href="./projeto.html">Sobre Projeto</a>
-            <a href="./area_aluno.html">Área do Aluno</a>
-            <a href="./area_professor.html">Área do Professor</a>
-            <a href="./atividades.html">Atividades do projeto</a>
-            <a href="./fale_conosco.html">Fale conosco</a>
-            <a href="./formulario.html">Inscreva-se</a>
+        <div id="mySideNav" class="sideNav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="./index.html">Início</a>
+            <a href="./anotherContents/projeto.html">Sobre Projeto</a>
+            <a href="./anotherContents/area_aluno.html">Área do Aluno</a>
+            <a href="./anotherContents/area_professor.html">Área do Professor</a>
+            <a href="./anotherContents/atividades.html">Atividades do projeto</a>
+            <a href="./anotherContents/fale_conosco.html">Fale conosco</a>
+            <a href="./anotherContents/formulario.html">Inscreva-se</a>
         </div>
     </nav>
 
-    <div style="display: flex;
-                font-size: 30px;
-                cursor: pointer;
-                margin-left: 90px;
-                margin-top: 20px;
-                flex-wrap: wrap;
-                flex-direction: column;" onclick="closeNav()">&#9776;</div>
+    <div id="menu-icon" onclick="openNav()">&#9776;</div>
 
-    <main>
-        <div class="top-content">
+    <main class="main-content">
+        <div class="main-content__top-content">
             <article>
                 <h2>Transformando a escola com Moedas Sociais</h2>
                 <p>Seja bem-vindo(a) ao projeto de Moedas Sociais do CIEP 386! Aqui você vai conhecer como essa
@@ -66,7 +60,7 @@
             </article>
         </div>
 
-        <section class="bottom-content">
+        <section class="main-content__bottom-content">
             <div class="content-box__explain1">
                 <h3>📘 Como funciona a Área do Aluno?</h3>
                 <p>A área do aluno é onde você pode acompanhar suas Moedas Sociais, ver suas conquistas e participar de
@@ -99,7 +93,7 @@
 
     <footer>
         <div>
-            <p>&copy; 2025 CIEP 386 Guilherme da Silveira Filho</p>
+            <p>&copy; 2025 CIEP 386 Guilherme da Silveira Filho | <i>Feito por Steve Vaz</i></p>
         </div>
 
         <div id="iendereco">
@@ -111,7 +105,7 @@
         </div>
     </footer>
 
-    <script src="./js/script.js"></script>
+    <script src="./js/menu.js"></script>
 </body>
 
 </html>
