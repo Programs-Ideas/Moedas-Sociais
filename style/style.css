@@ -41,7 +41,7 @@ nav .sideNav {
   height: 100%; /* Altura total do menu de navegação */
   width: 0; /* Largura inicial do menu de navegação */
   top: 0; /* Alinhamento ao topo da página */
-  z-index: 1; /* Colocando o menu acima de outros elementos */ 
+  z-index: 1; /* Colocando o menu acima de outros elementos */
   background-color: #cebaba; /* Cor de fundo do menu de navegação */
   position: fixed; /* Posição fixa para o menu de navegação */
   left: 0; /* Alinhamento à esquerda da página */
@@ -82,6 +82,24 @@ nav .sideNav .closebtn {
   margin-top: 20px; /* Margem superior do ícone do menu */
 }
 
+ul {
+  display: flex; /* Exibição em linha para a lista */
+  flex-wrap: wrap; /* Permite que os itens da lista quebrem a linha */
+  flex-direction: column; /* Direção da lista em coluna */
+  justify-content: center; /* Centraliza os itens da lista */
+  align-items: center; /* Alinhamento central dos itens da lista */
+}
+
+ul li {
+  display: flex; /* Exibição em bloco para os itens da lista */
+  width: 70%;
+  flex-direction: column; /* Direção dos itens da lista em coluna */
+  margin: 30px;
+  padding-bottom: 25px;
+  font-size: 25px; /* Tamanho da fonte dos itens da lista */
+  font-weight: 900;
+}
+
 article {
   display: flex;
   flex-wrap: wrap;
@@ -94,16 +112,16 @@ article {
 
 article a {
   text-decoration: none;
-  color: rgb(7, 7, 7);
   font-size: 20px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-weight: bold;
+  font-weight: 900; /* Negrito */
   transition: 2s;
   width: 50px;
   height: 20px;
   padding: 5px;
   background-color: dodgerblue;
+  display: contents; /* Afeta apenas o que está dentro da caixa do conteúdo */
   border-radius: 5px;
 }
 
@@ -112,11 +130,16 @@ article a:hover {
   transition: 2s;
 }
 
-article > p {
+article p,
+article .info-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 70%;
   text-align: justify;
   font-size: 25px;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 article h2 {
@@ -130,7 +153,7 @@ article h2 {
 
 article h2:hover {
   transition: 2s;
-  color: rgb(202, 199, 149);
+  color: rgb(233, 205, 45);
 }
 
 section {
@@ -140,10 +163,15 @@ section {
   justify-content: center;
 }
 
-section h3 {
+section h2 {
   text-align: center;
   padding-bottom: 30px;
   padding: 20px;
+}
+
+section h2:hover {
+  color: rgb(233, 205, 45);
+  transition: 1s;
 }
 
 section img {
@@ -152,6 +180,26 @@ section img {
   align-items: center;
   height: 500px;
   border-radius: 5px;
+}
+
+section a {
+  text-decoration: underline;
+  font-size: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: bold;
+  transition: 2s;
+  width: 50px;
+  height: 20px;
+  padding: 5px;
+  /* Afeta apenas o que está dentro da caixa do conteúdo*/
+  display: contents;
+  border-radius: 5px;
+}
+
+section a:hover {
+  color: rgb(233, 205, 45);
+  transition: 2s;
 }
 
 footer {
@@ -180,7 +228,7 @@ footer ul li a {
 }
 
 /* Desktop */
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   body {
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -219,6 +267,12 @@ footer ul li a {
     gap: 10px;
   }
 
+  .main-content__top-content:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 55px;
+  }
+
   .main-content__top-content > article {
     flex: 1 1 60%; /* Permite que o article ocupe mais espaço */
     padding: 30px;
@@ -228,9 +282,44 @@ footer ul li a {
   .main-content__bottom-content {
     display: flex;
     flex-wrap: wrap; /* flex: 1 1 100%; funciona aqui para um item flex que quebra a linha */
-    flex: 1; /* Permite que o article e o aside se dividam no .top-content */
+    flex: 1; /* Permite que a section ocupe com largura total */
     flex-direction: column;
     gap: 20px;
+  }
+
+  .content-box__explain1__vantagens {
+    display: flex;
+    flex: 1 1 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .main-content__bottom-content .content-box__explain3 > .info-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    text-align: justify;
+    padding: 20px;
+  }
+
+  .main-content__bottom-content .content-box__explain1:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .main-content__bottom-content .content-box__explain2:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+  .main-content__bottom-content .content-box__explain3:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   }
 
   .main-content__bottom-content > div[class^="content-box__explain"] {
@@ -241,11 +330,11 @@ footer ul li a {
     padding: 20px;
   }
 
-  .main-content__bottom-content div h3 {
+  .main-content__bottom-content div h2 {
     width: 100%;
-    padding-top: 60px;
-    padding-left: 35px;
-    font-size: 42px;
+    padding-top: 10px;
+    margin: 30px;
+    font-size: 40px;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
     transition: 2s;
@@ -253,9 +342,8 @@ footer ul li a {
 
   .main-content__bottom-content div p {
     width: 70%;
-    padding: 20px;
     padding-top: 30px;
-    font-size: 30px;
+    font-size: 25px;
     text-align: justify;
     font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
       "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -274,7 +362,9 @@ footer ul li a {
     transition: transform 0.3s ease;
   }
 
-  .main-content__bottom-content > div[class^="content-box__explain"] > img:hover {
+  .main-content__bottom-content
+    > div[class^="content-box__explain"]
+    > img:hover {
     transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
   }
 
@@ -284,7 +374,7 @@ footer ul li a {
   }
 
   .main-content__bottom-content .content-box__explain2 {
-    background-color: #9cda94;
+    background-color: #cad2e7;
     border-radius: 55px;
   }
 
