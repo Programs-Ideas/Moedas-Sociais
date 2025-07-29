@@ -9,6 +9,74 @@
     <link rel="stylesheet" href="../style/media.css">
 </head>
 
+<style>
+    /* Starting to design the input form only for student */
+
+    /* Styling the form container */
+
+    article>form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        padding: 40px;
+        background-color: blanchedalmond;
+        border-radius: 55px;
+        width: 70%;
+    }
+
+    article>form label {
+        font-size: x-large;
+        color: rgb(3, 2, 1);
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    article>form input,
+    article>form textarea {
+        width: 50%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    article>form input[type="file"] {
+        width: 50%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        background-color: white;
+    }
+
+    article>form select {
+        width: 50%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    button {
+        align-self: center;
+        width: 100px;
+        height: 50px;
+        background-color: dodgerblue;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+</style>
+
 <body>
 
     <header>
@@ -32,25 +100,24 @@
 
     <div id="menu-icon" onclick="openNav()">&#9776;</div>
 
-    <main>
-        <div class="singUp_container">
+    <main class="main-content">
+        <div class="main-content__top-content">
             <article>
-                <h2>Cadastre-se para entrar na área do aluno</h2>
-                <p></p>
-                <p></p>
+                <h2>Cadastre-se para entrar na área do aluno.</h2>
+                <p>Insira seu usuário e senha para entrar na plataforma.</p>
+                <p>Caso obtenha algum erro, contacte a equipe monitora do projeto ou a direção.</p>
 
-                <form action="../js/accessing_area_student.js" method="get" 
+                <form action="../back-end/php/accesing_area_student.php" method="get" 
                 id="signUp_container__formulario">
-                    <div class="container">
-                        <label for="">Digite seu nome usuário</label>
-                        <input type="email" name="" id="" title="Digite seu e-mail" placeholder="Digite seu e-mail"><br>
+                        <label for="user">Digite seu usuário</label>
+                        <input type="text" name="" id="" title="Digite seu usuario" placeholder="Digite seu usuário" maxlength="6"><br>
 
-                        <label for="senha">Senha:</label>
-                        <input type="password" id="senha" name="senha" title="Digite sua senha"
-                            placeholder="Digite sua senha"><br>
+                        <label for="matricula">Digite sua matricula</label>
+                        <input type="text" name="matricula" id="IdMatriculaFuncional" title="Digite sua matricula" placeholder="Digite sua matricula" maxlength="15"><br>
 
-                        <input type="submit"><br>
-                    </div>
+                        <button type="submit">Entrar</button>
+                        <p>Não tem uma conta? <a href="./formulario_aluno.html">Inscreva-se</a></p>
+                        <p>Esqueceu sua senha? <a href="./recuperar_senha.html">Recuperar senha</a></p>
                 </form>
             </article>
         </div>
@@ -67,6 +134,7 @@
     </footer>
 
     <script src="../js/menu.js"></script>   
+    <script src="../js/validacao_aluno.js"></script>
 
 </body>
 

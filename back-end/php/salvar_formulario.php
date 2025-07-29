@@ -9,15 +9,25 @@ if ($conn->connect_error) {
     die("Erro de conexão: " . $conn->connect_error);
 }
 
+// 1.1  Criando variáveis 
+//turma = 4 caracteres matricula = 202328771060881 (15 caracteres)
+
+$nome = "";
+$turma = 0;
+$matricula = 0; 
+
 // 2. Recebe os dados do formulário
 $nome = trim($_POST['nome'] ?? '');
 $turma = trim($_POST['turma'] ?? '');
+$matricula = trim($_POST['matricula'] ?? '');
 $moeda_sugerida = trim($_POST['sugestao'] ?? '');
 
 // 3. Validação básica
 if (empty($nome) || empty($turma) || empty($moeda_sugerida)) {
     die("Por favor, preencha todos os campos obrigatórios.");
 }
+
+//if ($nome >)
 
 // 4. Geração de login/senha automáticos
 $user_login = strtolower(str_replace(' ', '', $nome)) . rand(100, 999);
