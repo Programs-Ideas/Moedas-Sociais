@@ -1,0 +1,118 @@
+/* Specific styles for the Professor's area */
+.area-professor .main-content__top-content section {
+  display: flex;
+  background-color: #f1f8e9; /* Light green background */
+  border-left: 5px solid #4caf50; /* Green left border */
+  align-items: center;
+  padding: 30px;
+}
+
+.area-professor h2 {
+  color: #1976d2;
+  font-size: 40px; /* Font size for section titles */
+  border-bottom-color: #64b5f6;
+}
+
+.area-professor .area-professor__moedas {
+  background-color: #f57c00;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ff9800; /* Orange border */
+}
+
+.area-professor .area-professor__moedas h2,
+.area-professor .area-professor__moedas p,
+.area-professor .area-professor__moedas form {
+    margin-bottom: 55px;
+}
+
+.area-professor .area-professor__moedas:hover {
+  background-color: #ef6c00; /* Darker orange on hover */
+}
+
+.area-professor .area-professor__gerenciar {
+  background-color: #fce4ce;
+  border: 1px solid #ff9800; /* Orange border */
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.area-professor .area-professor__gerenciar h3 {
+  color: #f57c00; /* Dark orange color for section title */
+  font-size: 24px; /* Font size for section titles */
+}
+
+.area-professor .area-professor__gerenciar button {
+  width: 25%; /* Full width for buttons */
+  padding: 10px;
+  margin: 30px;
+  height: 50px;
+  background-color: #ec407a;
+}
+
+.area-professor .area-professor__gerenciar button:hover {
+  background-color: #d81b60; /* Darker pink on hover */
+}
+
+.area-professor .are-professor__gerenciar ul li {
+  margin-bottom: 10px; /* Space between list items */
+  border-left-color: #ec407a;
+}
+
+.area-professor .area-professor__moedas-distribuir button {
+  background-color: #4caf50; /* Green button */
+  color: white; /* White text */
+  padding: 10px 20px; /* Padding for the button */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.area-professor .area-professor__moedas-distribuir button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.area-professor form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between form elements */
+  background-color: #f1f8e9; /* Light green background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: none; /* No shadow */
+}
+
+.area-professor .main-content__top-content article dl {
+    margin: 30px;
+    padding: 0;
+    list-style: none;
+}
+
+.area-professor .main-content__top-content article dl dt {
+    font-weight: bold;
+    color: #388e3c; /* Verde escuro para os títulos */
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.area-professor .main-content__top-content article dl dd {
+    margin-bottom: 40px;
+    padding-left: 20px;
+    border-left: 3px solid #4CAF50; /* Verde para a borda esquerda */
+    font-size: x-large;
+}
+
+.area-professor form label {
+  color: #444;
+}
+
+.area-professor form input,
+.area-professor form textarea,
+.area-professor form select {
+  width: 100%; /* Full width for inputs */
+  padding: 10px; /* Padding for inputs */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size for inputs */
+}

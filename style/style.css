@@ -56,7 +56,7 @@ nav .sideNav {
 nav .sideNav > a {
   padding: 22px 8px 8px 42px; /* Espaçamento interno dos links do menu */
   text-decoration: none; /* Removendo o sublinhado dos links */
-  font-size: 22px; /* Tamanho da fonte dos links */
+  font-size: 25px; /* Tamanho da fonte dos links */
   color: #818181; /* Cor dos links do menu */
   display: flex; /* Exibição em bloco para os links do menu */
   transition: 0.3s; /* Transição suave para a cor dos links */
@@ -354,9 +354,8 @@ footer ul li a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    height: auto;
-    max-width: 500px; /* Limita a largura máxima da imagem */
+    width: 1400px;
+    height: 1150px;
     padding: 100px;
     border-radius: 5px;
     transition: transform 0.3s ease;

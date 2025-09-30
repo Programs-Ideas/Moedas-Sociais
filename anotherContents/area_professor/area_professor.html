@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIEP 386 - Moedas sociais</title>
+    <link rel="stylesheet" href="../../style/style.css">
+    <link rel="stylesheet" href="../../style/Screen/media.css">
+    <link rel="stylesheet" href="../../style/styling_pages/area_professor.css">
+</head>
+
+<body class="area-professor">
+
+    <header>
+        <img src="../../images/ciep.jpg" alt="CIEP 386">
+        <h1>Área do Professor</h1>
+    </header>
+
+    <nav>
+        <div id="mySideNav" class="sideNav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="../../index.html">Início</a>
+            <a href="../projeto.html">Sobre Projeto
+            <a href="../area_aluno/area_aluno.html">Área do Aluno</a>
+            <a href="../area_professor/area_professor.html">Área do Professor</a>
+            <a href="../atividades.html">Atividades do projeto</a>
+            <a href="../fale_conosco.html">Fale conosco</a>
+            <a href="../formulario_aluno.html">Inscreva-se (Aluno)</a>
+            <a href="../formulario_professor.html">Inscreva-se (Professor)</a>
+        </div>
+    </nav>
+
+    <div id="menu-icon" onclick="openNav()">&#9776;</div>
+
+    <main class="main-content">
+        <div class="main-content__top-content">
+            <article>
+                <h2>Bem vindo a área do professor <strong>"professor"</strong></h2>
+                <p>Neste ambiente, você vai poder:</p>
+                <dl>
+                    <dt>Gerenciar atividades</dt>
+                    <dd>Crie, edite e acompanhe as atividades para os alunos.</dd>
+                    <dt>Distribuir moedas sociais</dt>
+                    <dd>Registre a distribuição de moedas para os alunos com base nas atividades.</dd>
+                    <dt>Visualizar relatórios</dt>
+                    <dd>Acesse relatórios sobre a participação dos alunos e o fluxo de moedas.</dd>
+                    <dt>Comunicar-se com os alunos</dt>
+                    <dd>Ferramentas para comunicação e avisos.</dd>
+                </dl>
+                <p>Em caso de dúvidas, entre em contato com a coordenação do projeto.</p>
+            </article>
+        </div>
+
+        <section class="main-content__bottom-content area-professor__gerenciar">
+            <h2>Gerenciar atividades</h2>
+            <p>Clique no botão abaixo para criar uma nova atividade:</p>
+            <button>Nova atividade</button>
+            <h3>Atividades cadastradas:</h3>
+            <ul>
+                <li>Atividade de leitura - 10 moedas</li>
+                <li>Projeto de ciências - 20 moedas</li>
+            </ul>
+        </section>
+
+        <section class="main-content__bottom-content area-professor__moedas">
+            <h2>Distribuição de moedas sociais</h2>
+            <p>Você pode distribuir moedas sociais aos alunos com base na participação nas atividades.</p>
+            <form>
+                <label for="aluno">Selecione o aluno:</label>
+                <select id="aluno">
+                    <option value="aluno1">Aluno 1</option>
+                    <option value="aluno2">Aluno 2</option>
+                </select>
+                <label for="moedas">Quantidade de moedas:</label>
+                <input type="number" id="moedas" min="1" max="100">
+                <button type="submit">Distribuir Moedas</button>
+            </form>
+        </section>    
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CIEP 386</p>
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2867.693429546336!2d-43.4656610258181!3d-22.84779213576302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x996111fbf13947%3A0x2dac7d71e0ea45cc!2sCIEP%20386%20-%20Guilherme%20da%20Silveira%20Filho!5e1!3m2!1sen!2sbr!4v1753829746998!5m2!1sen!2sbr"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </footer>
+
+    <script src="../../js/menu.js"></script>
+    <script src="../../js/validacao_aluno.js"></script>
+
+</body>
+
+</html>

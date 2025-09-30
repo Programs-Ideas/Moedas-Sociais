@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIEP 386 - Moedas sociais</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/media.css">
+</head>
+
+<style>
+    /* Starting to design the input form only for student */
+
+    /* Styling the form container */
+
+    article>form {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        padding: 40px;
+        background-color: blanchedalmond;
+        border-radius: 55px;
+        width: 70%;
+    }
+
+    article>form label {
+        font-size: x-large;
+        color: rgb(3, 2, 1);
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    article>form input,
+    article>form textarea {
+        width: 50%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    article>form input[type="file"] {
+        width: 50%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        background-color: white;
+    }
+
+    article>form select {
+        width: 50%;
+        padding: 10px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+
+    button,
+    input[type="submit"] {
+        align-self: center;
+        width: 100px;
+        height: 50px;
+        background-color: dodgerblue;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    /* Estilo para mensagens de erro */
+    .error-message {
+        color: red;
+        font-size: 0.9em;
+        margin-top: -15px;
+        /* Ajuste para posicionamento */
+        margin-bottom: 10px;
+        text-align: center;
+        width: 50%;
+    }
+</style>
+
+<body>
+
+    <header>
+        <img src="../images/ciep.jpg" alt="CIEP 386">
+        <h1>Área do Professor</h1>
+    </header>
+
+
+    <nav>
+        <div id="mySideNav" class="sideNav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="../index.html">Início</a>
+            <a href="../projeto.html">Sobre Projeto</a>
+            <a href="../area_aluno/area_aluno.html">Área do Aluno</a>
+            <a href="../area_professor/area_professor.html">Área do Professor</a>
+            <a href="../atividades.html">Atividades do projeto</a>
+            <a href="../fale_conosco.html">Fale conosco</a>
+            <a href="../formulario_aluno.html">Inscreva-se (Aluno)</a>
+            <a href="../formulario_professor.html">Inscreva-se (Professor)</a>
+        </div>
+    </nav>
+
+    <div id="menu-icon" onclick="openNav()">&#9776;</div>
+
+    <main class="main-content">
+        <div class="main-content__top-content">
+            <article>
+                <h2>Cadastre-se para entrar na área do aluno</h2>
+                <p>Insira seu usuário e senha para entrar na plataforma.</p>
+                <p>Caso obtenha algum erro, contacte a equipe monitora do projeto ou a direção.</p>
+
+                <form action="../back-end/php/accesing_area_professor.php" method="get"
+                    id="signUp_container__formulario">
+                    <label for="user">Digite seu nome usuário</label>
+                    <input type="text" name="" id="" title="Digite seu e-mail" placeholder="Digite seu e-mail"><br>
+                    <div id="error-username-professor" class="error-message"></div>
+
+                    <label for="id">ID Professor:</label>
+                    <input type="text" name="IdFuncional" id="LoginMatricula" class="login-forms"
+                        title="ID Funcional/Vínculo" value="" maxlength="15" placeholder="Digite seu ID"><br>
+                    <div id="error-id-professor" class="error-message"></div>
+                    <button type="submit">Entrar</button>
+                </form>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 CIEP 386</p>
+    </footer>
+
+    <script src="../js/menu.js"></script>
+    <script src="../js/validacao_professor.js"></script>
+
+</body>
+
+</html>

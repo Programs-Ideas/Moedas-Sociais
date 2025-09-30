@@ -1,0 +1,15 @@
+.bottom-content > div[class^="content-box__explain"] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.content-box__explain .content-box__explain1__vantagens {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}

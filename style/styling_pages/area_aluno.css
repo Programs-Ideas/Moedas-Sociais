@@ -1,0 +1,99 @@
+
+/* Styles for the student area of the website */
+
+.area-aluno {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f9fbe7; /* Fundo suave para a área do aluno */
+}
+
+.area-aluno .main-content__top-content section {
+    display: flex;
+    background-color: #e8f5e9;
+    border-left: 5px solid #4CAF50;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    padding: 30px;
+}
+
+.area-aluno .main-content__top-content section p {
+    font-size: 25px;
+    line-height: 1.5;
+    color: #555; /* Cinza escuro para o texto */
+}
+
+.area-aluno .main-content__top-content section dl {
+    margin: 30px;
+    padding: 0;
+    list-style: none;
+}
+
+.area-aluno .main-content__top-content section dl dt {
+    font-weight: bold;
+    color: #388e3c; /* Verde escuro para os títulos */
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.area-aluno .main-content__top-content section dl dd {
+    margin-bottom: 40px;
+    padding-left: 20px;
+    border-left: 3px solid #4CAF50; /* Verde para a borda esquerda */
+    font-size: x-large;
+}
+
+.area-aluno .main-content__top-content section h2 {
+    color: #4CAF50;
+    margin: 0;
+    font-size: 40px;
+}
+
+.area-aluno h2 {
+    color: #388e3c;
+    border-bottom-color: #66bb6a;
+    font-size: 40px;
+    padding-top: 50px;
+    margin-bottom: 10px;
+}
+
+.area-aluno article p, .area-aluno section p {
+    font-size: 24px;
+    line-height: 1.5;
+    color: #555; /* Cinza escuro para o texto */
+}
+
+
+.area-aluno .area-aluno__moedas {
+    background-color: #fffde7; /* Amarelo muito suave para destacar as moedas */
+    border: 1px solid #FFEB3B; /* Borda amarela */
+    padding: 25px;
+    text-align: center;
+}
+
+.area-aluno__moedas, .area-aluno__atividades {
+    padding: 25px;
+    background-color: #f1f8e9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+.area-aluno .area-aluno__moedas p strong {
+    color: #f57c00; /* Laranja para destacar a quantidade de moedas */
+    font-size: x-large;
+    float: right;
+    display: block; /* Para ocupar a mesma linha */
+}
+
+.area-aluno .area-aluno__moedas em {
+    font-style: italic;
+    color: #777; /* Cinza escuro para o texto de informações adicionais */
+    margin-top: 10px;
+    width: 90%;
+}
+
+.area-aluno ul li {
+    border-left-color: #2196f3;
+}

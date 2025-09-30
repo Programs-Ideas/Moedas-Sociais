@@ -9,6 +9,38 @@
     <link rel="stylesheet" href="../style/media.css">
 </head>
 
+<style>
+    .main-content__bottom-content {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        background-color: aquamarine;
+        justify-content: center;
+        align-items: center;
+        border-radius: 55px;
+    }
+
+    #photo-monitores h2 {
+        font-size: 40px;
+    }
+
+    .main-content__bottom-content:hover {
+        transform: scale(1.01);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        border-radius: 55px;
+    }
+
+    .img-group {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 20px;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
 <body>
 
     <header>
@@ -16,14 +48,14 @@
         <h1>Destaques</h1>
     </header>
 
-    
+
     <nav>
         <div id="mySideNav" class="sideNav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="../index.html">Início</a>
-            <a href="./projeto.html">Sobre Projeto
-            <a href="./area_aluno.html">Área do Aluno</a>
-            <a href="./area_professor.html">Área do Professor</a>
+            <a href="./projeto.html">Sobre Projeto</a>
+            <a href="../anotherContents/area_aluno/area_aluno.html">Área do Aluno</a>
+            <a href="../anotherContents/area_professor/area_professor.html">Área do Professor</a>
             <a href="./atividades.html">Atividades do projeto</a>
             <a href="./fale_conosco.html">Fale conosco</a>
             <a href="./formulario_aluno.html">Inscreva-se (Aluno)</a>
@@ -33,34 +65,37 @@
 
     <div id="menu-icon" onclick="openNav()">&#9776;</div>
 
-    <main>
-        <div class="top-content">
+    <main class="main-content">
+        <div class="main-content__top-content">
             <article>
-                <h2></h2>
-                <p></p>
-                <p></p>
+                <h2>Possue dúvidas?</h2>
+                <p>Participe em nossa reunião sexta-feira! Estaremos dispostos a ouvir e exclarecer sobre o projeto
+                    aprofundadamente.</p>
             </article>
-            <aside>
-                <h2></h2>
-                <p></p>
-            </aside>
         </div>
+        </section>
 
-        <section class="bottom-content">
-            <div>
-
-            </div>
-            <div>
-
-            </div>
-            <div>
-
-            </div>
+        <section class="main-content__bottom-content">
+            <aside id="photo-monitores">
+                <h2>Monitores do projeto a sua disposição: </h2>
+                <div class="img-group">
+                    <img src="../images/charles-etoroma-95UF6LXe-Lo-unsplash.jpg" alt="" width="350px" height="500px">
+                    <img src="../images/rafaella-mendes-diniz-et_78QkMMQs-unsplash.jpg" alt="" width="350px"
+                        height="500px">
+                    <img src="../images/toa-heftiba-O3ymvT7Wf9U-unsplash.jpg" alt="" width="350px" height="500px">
+                    <img src="../images/Steve1.jpg" alt="" width="350px" height="500px">
+                </div>
+            </aside>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2025 CIEP 386</p>
+
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2867.693429546336!2d-43.4656610258181!3d-22.84779213576302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x996111fbf13947%3A0x2dac7d71e0ea45cc!2sCIEP%20386%20-%20Guilherme%20da%20Silveira%20Filho!5e1!3m2!1sen!2sbr!4v1753829746998!5m2!1sen!2sbr"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
     </footer>
 
     <script src="../js/menu.js"></script>
